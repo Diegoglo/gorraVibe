@@ -1,0 +1,126 @@
+/* Estilos de Navbar */
+.navbar {
+    background-color: #1A1A1A; /* Negro suave para el fondo */
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Playfair Display', serif;
+    /* font-family: 'Lobster', cursive; */
+}
+
+.navbar-brand {
+    color: #B22222; /* Rojo burdeos para la marca */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navbar-brand i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #B22222; /* Ícono burdeos */
+}
+
+.navbar-brand:hover {
+    color: #FFFFFF; /* Blanco al hacer hover */
+}
+
+.navbar-brand:hover i {
+    color: #FFFFFF;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #FFFFFF; /* Blanco para los enlaces */
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #B22222; /* Burdeos al hacer hover */
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #B22222;
+    transition: width 0.3s;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Estilos de Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #1A1A1A; /* Fondo negro suave */
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.sidebar.active {
+    transform: translateX(250px);
+}
+
+.sidebar .close-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF; /* Blanco para el botón de cerrar */
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .sidebar-links li {
+    margin: 20px 0;
+}
+
+.sidebar .sidebar-links li a {
+    color: #FFFFFF; /* Blanco para los enlaces */
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar .sidebar-links li a:hover {
+    color: #B22222; /* Rojo burdeos al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco translúcido */
+}
+
+.sidebar .sidebar-links li a.active {
+    color: #B22222;
+    background-color: rgba(178, 34, 34, 0.2); /* Fondo burdeos translúcido */
+}

@@ -1,0 +1,47 @@
+<h3 class="carousel-title" id="menu">Gorros</h3>
+<div class="catalog-container">
+    <button class="arrow left" (click)="scrollLeft()">&lt;</button> <!-- Flecha izquierda -->
+    
+    <div class="product-list">
+      <div
+        class="product-card"
+        *ngFor="let product of products"
+        (mouseover)="hoveredProduct = product.name"
+        (mouseleave)="hoveredProduct = null"
+      >
+        <img class="product-image" [src]="product.image" alt="{{ product.name }}" />
+        <div class="product-info" [class.show]="hoveredProduct === product.name">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <p>${{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <button class="arrow right" (click)="scrollRight()">&gt;</button> <!-- Flecha derecha -->
+</div>
+
+<!-- Nueva fila para productos relacionados -->
+<h3 class="carousel-title">Calcetas</h3>
+<div class="catalog-container">
+    <button class="arrow left" (click)="scrollLeftRelated()">&lt;</button> <!-- Flecha izquierda -->
+    
+    <div class="product-list related">
+      <div
+        class="product-card"
+        *ngFor="let relatedProduct of relatedProducts"
+        (mouseover)="hoveredProduct = relatedProduct.name"
+        (mouseleave)="hoveredProduct = null"
+      >
+        <img class="product-image" [src]="relatedProduct.image" alt="{{ relatedProduct.name }}" />
+        <div class="product-info" [class.show]="hoveredProduct === relatedProduct.name">
+          <h3>{{ relatedProduct.name }}</h3>
+          <p>{{ relatedProduct.description }}</p>
+          <p>${{ relatedProduct.price }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <button class="arrow right" (click)="scrollRightRelated()">&gt;</button> <!-- Flecha derecha -->
+</div>
+  

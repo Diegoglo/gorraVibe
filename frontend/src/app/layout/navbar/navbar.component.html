@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" routerLink="/">
+    <i class="fas fa-feather-alt"></i> Gorra Vibe
+  </a>    
+  <button class="navbar-toggler" type="button" (click)="toggleSidebar()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" (click)="setActive('home')">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutUs" (click)="setActive('product-info')">
+          <i class="fas fa-info-circle"></i> Sobre nosotros
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#menu" (click)="setActive('services')">
+          <i class="fas fa-tshirt"></i> Menú
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#productCarousel" (click)="setActive('contact')">
+          <i class="fas fa-tags"></i> Promociones
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#locales" (click)="setActive('locales')">
+          <i class="fas fa-store"></i> Locales
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <a class="nav-link" [routerLink]="['/login']" (click)="setActive('signin')">
+          <i class="fas fa-sign-in-alt"></i> SignIn
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <span class="nav-link">{{ userName }}</span>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']" (click)="setActive('signin')">
+          <i class="fas fa-sign-in-alt"></i> SignIn
+        </a>
+      </li> -->
+    </ul>
+  </div>
+</nav>
+
+<div class="sidebar" [ngClass]="{'active': isSidebarOpen}">
+  <button class="close-btn" (click)="closeSidebar()">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul class="sidebar-links">
+    <li>
+      <a [routerLink]="['/home']" [ngClass]="{'active': activeLink === 'home'}" (click)="setActive('home')">
+        <i class="fas fa-home"></i> Inicio
+      </a>
+    </li>
+    <li>
+      <a href="#aboutUs" [ngClass]="{'active': activeLink === 'product-info'}" (click)="setActive('product-info')">
+        <i class="fas fa-info-circle"></i> Sobre nosotros
+      </a>
+    </li>
+    <li>
+      <a href="#menu" [ngClass]="{'active': activeLink === 'services'}" (click)="setActive('services')">
+        <i class="fas fa-utensils"></i> Menú
+      </a>
+    </li>
+    <li>
+      <a href="#promos" [ngClass]="{'active': activeLink === 'contact'}" (click)="setActive('contact')">
+        <i class="fas fa-tags"></i> Promociones
+      </a>
+    </li>
+    <li>
+      <a href="#locales" [ngClass]="{'active': activeLink === 'locales'}" (click)="setActive('locales')">
+        <i class="fas fa-store"></i> Locales
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/login']" [ngClass]="{'active': activeLink === 'signin'}" (click)="setActive('signin')">
+        <i class="fas fa-sign-in-alt"></i> SignIn
+      </a>
+    </li>
+  </ul>
+</div>

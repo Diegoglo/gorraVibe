@@ -1,0 +1,91 @@
+.container-fluid {
+    background: linear-gradient(to right, #1A1A1A, #660000); /* Degradado de negro a rojo oscuro */
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; /* Asegura que ocupe toda la altura disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+
+}
+
+.row {
+    width: 100%;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #aad243;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para un look más moderno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover */
+    overflow: hidden;
+    border: 5px solid #ff0101; /* Borde rojo de 10px */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto de flotación al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra en hover */
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease; /* Efecto en la imagen al hacer hover */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Aumenta un poco la imagen al pasar el ratón */
+}
+
+.card-body {
+    text-align: center; /* Alinea el texto al centro */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el texto */
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #d32f2f; /* Rojo vibrante para el título */
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2rem;
+}
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.modal-body {
+    background-color: #f8f9fa;
+}
+
+.btn-close {
+    background-color: #ff6347;
+    border-radius: 50%;
+    /* opacity: 0.8; */
+}
+
+.btn-close:hover {
+    opacity: 1;
+    background-color: #ff6347;
+}
+  

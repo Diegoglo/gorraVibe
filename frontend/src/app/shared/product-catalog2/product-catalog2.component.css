@@ -1,0 +1,119 @@
+.catalog-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente las flechas y el contenido */
+    overflow: hidden; /* Ocultar barra de desplazamiento */
+    padding: 10px;
+    background-color: black; /* Fondo negro para el contenedor */
+    max-width: 100%; /* Asegúrate de que el contenedor no se desborde */
+    font-family: 'Playfair Display', serif;
+
+}
+
+.product-listt {
+    display: flex;
+    overflow: hidden; /* Ocultar barra de desplazamiento */
+    transition: transform 0.3s; /* Suave animación al desplazar */
+}
+
+.product-listt.relatedd{
+    display: flex;
+    overflow: hidden; /* Ocultar barra de desplazamiento */
+    transition: transform 0.3s; /* Suave animación al desplazar */
+}
+
+.product-card {
+    min-width: 200px;
+    margin-right: 10px;
+    position: relative;
+    transition: transform 0.3s;
+    background-color: red; /* Fondo rojo para las tarjetas */
+    border: 2px solid #ff0000; /* Borde rojo */
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card:hover .product-info {
+    opacity: 1;
+}
+
+.show {
+    display: flex; /* Asegúrate de que se muestre correctamente */
+}
+
+.arrow {
+    background-color: black; /* Fondo negro para las flechas */
+    color: white; /* Color de las flechas */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    font-size: 24px; /* Tamaño de la flecha */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1; /* Asegurar que las flechas estén encima */
+}
+
+.left {
+    margin-right: 10px; /* Espacio a la derecha de la flecha izquierda */
+}
+
+.right {
+    margin-left: 10px; /* Espacio a la izquierda de la flecha derecha */
+}
+
+@media (max-width: 768px) {
+    .product-card {
+         min-width: 150px;
+    }
+}
+
+.carousel-title {
+    font-size: 24px; /* Tamaño del texto */
+    color: #f1c40f; /* Color dorado para un toque elegante */
+    margin-bottom: 10px; /* Espacio entre el título y el carrusel */
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    position: relative; /* Posicionamiento relativo para agregar efecto */
+    background-color: black; /* Fondo transparente para que no se vea blanco */
+    padding: 5px; /* Espaciado interno alrededor del texto */
+  }
+  
+  .carousel-title::before {
+    content: ''; /* Pseudo-elemento para la línea */
+    display: block; /* Mostrar el bloque */
+    width: 50px; /* Longitud de la línea */
+    height: 4px; /* Altura de la línea */
+    background-color: #e74c3c; /* Color rojo para la línea */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Centrado verticalmente */
+    left: 0; /* Alinear a la izquierda */
+    transform: translateY(-50%); /* Ajustar el centrado */
+  }
+  
+  
+  
+  
+  

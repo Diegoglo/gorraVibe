@@ -1,0 +1,92 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    margin: 0;
+    background: linear-gradient(to right, #1A1A1A, #660000); /* Degradado de negro a rojo oscuro */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ocupa todo el espacio disponible dentro de :host */
+    padding: 2rem; /* Ajusta el espaciado interno según sea necesario */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #2a1212; /* Fondo oscuro para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d8d8d8;
+    font-family: 'Cinzel', serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: 'Cinzel', serif;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #D52B1E;
+}
+
+.form-group input:focus {
+    border-color: #777;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.register-link {
+    text-align: end;
+    margin-top: 13px;
+    font-family: 'Cinzel', serif;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #ff0000;
+
+}
+
+.register-link p{
+    color: #f5f5dc;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+  

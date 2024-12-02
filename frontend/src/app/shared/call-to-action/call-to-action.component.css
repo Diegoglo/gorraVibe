@@ -1,0 +1,74 @@
+.hero-section {
+  background: linear-gradient(to right, #1A1A1A, #660000); /* Degradado de negro a rojo oscuro */
+  color: #ffffff; /* Texto blanco para un contraste elegante */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+  width: 100%; /* Cambiado a 100% para evitar problemas de ancho */
+  padding: 0 1rem;
+  font-family: 'Playfair Display', serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-section h1 {
+  font-size: 4rem; /* Tamaño de fuente más grande */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #000000; /* Sombra negra para resaltar */
+}
+
+.hero-section p {
+  font-size: 2rem; /* Texto más grande */
+  margin-bottom: 1rem;
+  color: #ffffff; /* Texto blanco para más contraste */
+}
+
+.hero-section .btn {
+  margin-bottom: 1rem;
+  padding: 1rem 2rem; /* Botones más grandes */
+  font-size: 1.5rem; /* Texto más grande en los botones */
+  border-radius: 30px; /* Bordes redondeados para una apariencia más suave */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Efecto de transición */
+}
+
+.hero-section .btn-outline-danger {
+  border: 2px solid #961717; /* Borde rojo oscuro */
+  color: #ffcc00; /* Texto amarillo claro */
+}
+
+.hero-section .btn-outline-danger:hover {
+  background-color: #ffcc00; /* Fondo amarillo claro al pasar el ratón */
+  color: #000000; /* Texto negro al pasar el ratón */
+}
+
+.hero-section .btn-outline-light {
+  border: 2px solid #ffffff; /* Borde blanco */
+  color: #ffffff; /* Texto blanco */
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #ffffff; /* Fondo blanco al pasar el ratón */
+  color: #000000; /* Texto negro al pasar el ratón */
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2.5rem; /* Tamaño más grande para mobile */
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+
+  .hero-section .btn {
+    padding: 0.8rem 1.5rem; /* Botones más grandes para mobile */
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
